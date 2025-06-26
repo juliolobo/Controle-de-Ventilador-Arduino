@@ -2,6 +2,7 @@
 Controle o seu ventilador de 3 velocidades usando relés e um NodeMCU
 
 Altere as informações de Wifi, Altere, caso necessário, a pinagem utilizada.
+Caso queira definir um IP fixo, descomente as linhas 22, 24, 26 e 58.
 
 Troque o seletor de velocidade de 4 posições (Desligado, Forte, Medio e Fraco) pou um Push Button.
 
