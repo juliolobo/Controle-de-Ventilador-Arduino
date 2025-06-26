@@ -1,5 +1,5 @@
 # Controle-de-Ventilador-NodeMCU
-Controle o seu ventilador de 3 velocidades usando relés e um NodeMCU
+Controle o seu ventilador de 3 velocidades usando relés e um NodeMCU (Esp8266)
 
 Altere as informações de Wifi, Altere, caso necessário, a pinagem utilizada.
 Caso queira definir um IP fixo, descomente as linhas 22, 24, 26 e 58.
