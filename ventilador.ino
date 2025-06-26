@@ -124,7 +124,7 @@ void loop(){
   buf += "<style>";
   buf += "body{background:#f5f6fa;font-family:'Segoe UI','Arial',sans-serif;margin:0;padding:0;}";
   buf += ".center{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;}";
-  buf += ".box{background:#fff;border-radius:16px;box-shadow:0 4px 24px #b9bcc459;padding:0px 28px 24px;max-width:350px;width:100%;}";
+  buf += ".box{background:#fff;border-radius:16px;box-shadow:0 4px 24px #b9bcc459;padding:0px 28px 24px;max-width:330px;width:100%;}";
   buf += "h1{color:#0b3056;font-size:2em;margin-bottom:24px;text-align:center;letter-spacing:-1px;}";
   buf += ".btn{display:flex;align-items:center;justify-content:center;margin-bottom:20px;width:100%;padding:16px 0 16px 0;font-size:1.15em;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:background 0.2s;font-weight:500;box-shadow:0 2px 8px #b9bcc459;}";
   buf += ".btn:last-child{margin-bottom:0;}";
@@ -141,7 +141,18 @@ void loop(){
   buf += ".btn-off:hover{background:#c23616;}";
   buf += ".footer{margin-top:16px;color:#b4b4b4;font-size:.9em;text-align:center;}";
   buf += "a{color:#377dff;text-decoration:none;}";
+  buf += ".box{position:relative;}"; // já no seu código? Se não, adicione!
+  buf += "body.dark{background:#181828;}";
+  buf += ".box.dark{background:#232336;}";
+  buf += "body.dark h1{color:#fff;}";
+  buf += "body.dark .btn{color:#fff;}";
+  buf += "body.dark .footer{color:#888;}";
+  buf += "body.dark .btn-max{background:#eb861e;}";
+  buf += "body.dark .btn-med{background:#119fba;}";
+  buf += "body.dark .btn-min{background:#6e53b8;}";
+  buf += "body.dark a{color:#8ab4f8;}";
   buf += "</style></head><body>";
+  buf += "<button id='darkModeBtn' title='Modo Escuro' style='position:absolute;top:18px;right:18px;background:transparent;border:none;cursor:pointer;outline:none;'><svg id='iconSun' style='display:none;' xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'><circle cx='12' cy='12' r='5' fill='#FFDF00'/><g stroke='#FFDF00' stroke-width='2'><line x1='12' y1='2' x2='12' y2='5'/><line x1='12' y1='19' x2='12' y2='22'/><line x1='2' y1='12' x2='5' y2='12'/><line x1='19' y1='12' x2='22' y2='12'/><line x1='4.2' y1='4.2' x2='6.3' y2='6.3'/><line x1='17.7' y1='17.7' x2='19.8' y2='19.8'/><line x1='4.2' y1='19.8' x2='6.3' y2='17.7'/><line x1='17.7' y1='6.3' x2='19.8' y2='4.2'/></g></svg><svg id='iconMoon' xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'><path fill='#444' d='M21 12.79A9 9 0 0 1 12.79 3a1 1 0 0 0-1.1 1.36A7 7 0 1 0 19.64 12.9a1 1 0 0 0 1.36-1.1z'/></svg></button>";
   buf += "<div class='center'><div class='box'>";
   buf += "<h1>Controle do Ventilador</h1>";
   buf += "<a href='?f=FORTE' class='btn btn-max' type='submit' title='Forte'>";
@@ -177,7 +188,21 @@ void loop(){
   buf += "<span>Desligar</span>";
   buf += "</a>";
   buf += "<div class='footer'>Desenvolvido por <a href='https://github.com/juliolobo/Controle-de-Ventilador-Arduino' target='_blank'>Julio Lobo</a></div>";
-  buf += "</div></div></body></html>";
+  buf += "</div></div>";
+  buf += "<script>";
+  buf += "const btn = document.getElementById('darkModeBtn');";
+  buf += "const iconSun = document.getElementById('iconSun');";
+  buf += "const iconMoon = document.getElementById('iconMoon');";
+  buf += "function setDarkMode(e){";
+  buf += "if(e){document.body.classList.add('dark');document.querySelector('.box').classList.add('dark');iconSun.style.display='inline';iconMoon.style.display='none';localStorage.setItem('darkmode','1');}";
+  buf += "else{document.body.classList.remove('dark');document.querySelector('.box').classList.remove('dark');iconSun.style.display='none';iconMoon.style.display='inline';localStorage.setItem('darkmode','0');}";
+  buf += "}";
+  buf += "window.onload=function(){";
+  buf += "if(localStorage.getItem('darkmode')==='1'){setDarkMode(true);}else{setDarkMode(false);}";
+  buf += "};";
+  buf += "btn.onclick=function(){setDarkMode(!document.body.classList.contains('dark'));};";
+  buf += "</script>";
+  buf += "</body></html>";
   //Enviando para o browser a 'pagina' criada.
   client.print(buf);
   client.flush();
