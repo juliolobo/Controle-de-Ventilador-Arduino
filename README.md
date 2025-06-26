@@ -18,4 +18,5 @@ Materiais Utilizados:
 4 - Fonte de alimentação de 5v
 
 Acessando o Endereço IP exibido no Monitor Serial você obterá a seguinte página
+
 ![image](https://github.com/user-attachments/assets/aa7f5a78-afff-4608-85b3-63b9bf1f7ac7)
