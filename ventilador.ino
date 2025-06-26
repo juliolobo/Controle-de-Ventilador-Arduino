@@ -18,6 +18,13 @@
 const char* ssid = "NOME_DA_REDE_WIFI"; 
 const char* password = "SENHA_DA_REDE_WIFI";
 
+//IP do NodeMCU (para voce acessar pelo browser - voce TEM que mudar este IP tambem)
+// IPAddress ip(192, 168, 1, 203);
+//IP do roteador da sua rede wifi
+// IPAddress gateway(192, 168, 1, 1);
+//Mascara de rede da sua rede wifi
+// IPAddress subnet(255, 255, 255, 0);
+
 WiFiServer server(80);
 
 /* -----------------------------------------
@@ -48,6 +55,7 @@ void setup() {
     Serial.begin(115200);
 
     //Conectando a rede Wifi
+    // WiFi.config(ip, gateway, subnet);
     WiFi.begin(ssid, password);
     while (WiFi.status() != WL_CONNECTED){
         delay(500);
