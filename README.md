@@ -20,4 +20,5 @@ Materiais Utilizados:
 
 Acessando o Endereço IP exibido no Monitor Serial você obterá a seguinte página
 
-![image](https://github.com/user-attachments/assets/aa7f5a78-afff-4608-85b3-63b9bf1f7ac7)
+![image](https://github.com/user-attachments/assets/c9dea55f-33c3-4f4e-b2a7-79ad4e077075)
+![image](https://github.com/user-attachments/assets/d56d4fe3-5577-4b6a-ae1d-499c3395a2a0)
