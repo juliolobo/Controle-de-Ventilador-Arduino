@@ -114,5 +114,5 @@ A interface principal possui:
 
 Ao acessar o endereço do módulo no navegador, você verá uma interface semelhante a esta:
 
-![image](https://github.com/user-attachments/assets/c9dea55f-33c3-4f4e-b2a7-79ad4e077075)
-![image](https://github.com/user-attachments/assets/d56d4fe3-5577-4b6a-ae1d-499c3395a2a0)
+<img width="387" height="576" alt="image" src="https://github.com/user-attachments/assets/4a218ada-26a2-4145-a27e-2368fc87a21b" />
+<img width="387" height="574" alt="image" src="https://github.com/user-attachments/assets/37d8a590-8ea5-4afd-a1e8-dd1a8cec1611" />
