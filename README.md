@@ -1,4 +1,9 @@
-# Controle-de-Ventilador-NodeMCU
+# Controle de Ventilador com NodeMCU
+
+<p align="center">
+   <img width="250" height="250" alt="ventilador" src="https://github.com/user-attachments/assets/912f69ae-8e9f-48e0-9c61-0ff80536b735" />
+</p>
+
 
 Controle um ventilador de 3 velocidades usando relés e um `NodeMCU ESP8266`, com:
 
