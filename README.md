@@ -26,10 +26,16 @@ O ventilador sempre inicia desligado.
 
 ## Materiais utilizados
 
-1. Push Button
+1. Push Button de arcade
 2. NodeMCU v2 / ESP8266
 3. Módulo relé de 4 canais
 4. Fonte de alimentação 5V
+
+![image](https://github.com/user-attachments/assets/40bb8138-d697-479f-a585-fb19919bdff5)
+![image](https://github.com/user-attachments/assets/5e20346e-a8d8-4a23-8ff2-591dfd530d8a)
+
+![image](https://github.com/user-attachments/assets/e3aead9b-05c6-400f-8b76-20dda8c622bd)
+![image](https://github.com/user-attachments/assets/736dcabc-45df-449b-8dd0-32e673f99e56)
 
 ## Bibliotecas necessárias
 
